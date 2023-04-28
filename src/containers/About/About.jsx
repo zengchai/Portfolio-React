@@ -1,6 +1,7 @@
 import React from 'react'
 import aboutimg from '../../img/About.jpg'
 import '../About/about.css';
+import { Link } from 'react-router-dom';
 
 const About = () => {
   return (
@@ -29,8 +30,8 @@ const About = () => {
                         </div>
                     </div>
                     <div className="about_buttons">
-                        <a download="" target="_blank" href="img/Meet LOY!.pdf" className="button button--flex">
-                        Download CV<i className="uil uil-download-alt button_icon"></i></a>
+                    <Link to="/meet_loy.pdf"  className="button button--flex" target="_blank" download>
+                        Download CV<i className="uil uil-download-alt button_icon"></i></Link>
                     </div>
                 </div>
             </div>
