@@ -1,0 +1,42 @@
+
+.work{
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+}
+
+.qualification_tabs{
+    display: flex;
+    justify-content: space-evenly;
+    margin-bottom: var(--mb-2);
+}
+
+.qualification_button{
+    font-size: var(--h3-font-size);
+    font-weight: var(--font-medium);
+    cursor: pointer;
+}
+
+.qualification_button:hover{
+    color: var(--first-color);
+}
+
+.qualification_button.clicked{
+    color: var(--first-color);
+}
+
+
+.qualification_icon{
+    font-size:1.8rem;
+    margin-right: var(--mb-0-25);
+}
+
+
+@media screen and (min-width: 768px){
+.qualification_tabs{
+    justify-content: space-evenly;
+}
+.qualification_button{
+    margin: 0 var(--mb-1);
+    margin-bottom: 2rem;
+}
+}

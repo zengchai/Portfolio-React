@@ -1,0 +1,21 @@
+
+.services_modal-service{
+    display: flex;
+}
+
+.services_modal-servicel{
+    display: flex;
+    font-weight: var(--font-medium);
+    align-items: center;
+}
+
+.services_modal-icon{
+    color: var(--first-color);
+    margin-right: var(--mb-0-25);
+}
+
+.services_modal-iconl{
+    color: var(--first-color);
+    margin-right: var(--mb-0-25);
+    font-size: 1.5rem;
+}

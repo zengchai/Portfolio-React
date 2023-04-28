@@ -1,0 +1,10 @@
+/*contact me*/
+.contact_container{
+    row-gap: 1rem;
+}
+
+.contact_box{
+    padding-bottom: 2rem;
+    padding-top: 10rem;
+
+}

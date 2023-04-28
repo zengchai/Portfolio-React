@@ -1,0 +1,164 @@
+.container{
+    max-width: 768px;
+    margin-left: var(--mb-1-5);
+    margin-right: var(--mb-1-5);
+}
+
+.nav{
+    max-width:968px;
+    height:var(--header-height);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header{
+    width:100%;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: var(--z-fixed); /*define the order of the element*/
+    background-color: var(--body-color);
+}
+
+.grid{
+    display: grid;
+    gap: 1.5rem;
+}
+
+/*Button dark/light*/
+.nav_btns{
+    display: flex;
+    align-items: center;
+}
+
+.change-theme{
+    font-size: 1.25rem;
+    color: var(--title-color);
+    margin-right: var(--mb-1);
+    cursor: pointer;
+}
+
+.change-theme:hover{
+    color: var(--first-color);
+}
+
+
+.nav_logo,.nav_toggle{
+    color: var(--title-color);
+    font-weight: var(--font-medium);
+    cursor: pointer;
+}
+
+
+.nav_toggle{
+    font-size: 1.1rem;
+    display: block;
+}
+
+.nav_toggle:hover{
+    color:var(--frist-color);
+}
+
+.nav_logo:hover{
+    color:var(--frist-color);
+}
+
+.nav_close{
+    position: absolute;
+    right:1.3rem;
+    bottom: .5rem;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: var(--title-color);
+}
+
+.nav_close:hover{
+    color: var(--first-color-alt);
+}
+
+.nav_link{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: var(--small-font-size);
+    color: var(--title-color);
+    font-weight: var(--font-medium);
+}
+
+.header.header_shadow{
+    box-shadow: 0 0 0.5rem rgba(0, 0, 0, 10%);
+    transition: 0.3s;
+}
+
+.nav_link:hover{
+    color:var(--first-color);
+}
+
+.items{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: var(--small-font-size);
+    color: var(--title-color);
+    font-weight: var(--font-medium);
+}
+
+.items:hover{
+    color:var(--first-color);
+}
+
+@media screen and (max-width: 768px){
+    .nav_menu{
+        position: fixed; /*will keep stay at fixed position even the page scrolled*/
+        bottom: -100%;
+        left: 0;
+        width: 100%;
+        background-color: var(--body-color);
+        padding: 2rem 1.5rem 4rem; /*top right&left bottom*/
+        box-shadow: 0 -1px 4px rgba(0,0,0,.15);
+        border-radius:1.5rem 1.5rem 0 0;
+        transition: .3s;
+    }
+    
+}
+
+@media screen and (min-width: 768px){
+.nav_list{
+    grid-template-columns: repeat(3,1fr); /*use for specifies the number of column (repeat(3,1fr) means 3 column and 1 fraction per each column*/
+    gap: 2rem; /*distance between row*/
+}
+
+
+.nav{
+    height: calc(var(--header-height) + 1.5rem);
+    column-gap: 1rem;
+}
+
+
+.nav_list{
+    display: flex;
+    column-gap: 2rem;
+    margin-right: .5rem;
+}
+
+.header{
+    top:0;
+    bottom: initial;
+    padding:0 1rem;
+}
+
+
+.nav_menu{
+    margin-left: auto;
+}
+
+.change-theme{
+    margin: 0;
+}
+
+.nav_toggle,.nav_close{
+    display: none;
+}
+
+}
