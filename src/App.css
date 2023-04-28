@@ -1,38 +1,177 @@
-.App {
-  text-align: center;
+*{
+    box-sizing: border-box;
+    padding:0;
+    margin:0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+html{
+    scroll-behavior: smooth;
+    position: relative;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+
+.main{
+    margin:0 0 var(--header-height) 0;
+    font-family:var(--body-font);
+    font-size: var(--normal-font-size);
+    background-color: var(--body-color);
+    color: var(--text-color);
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+
+h1,h2,h3,h4{
+    color: var(--title-color);
+    font-weight: var(--font-semi-bold);
 }
 
-.App-link {
-  color: #61dafb;
+ul{
+    list-style:none;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+a{
+    text-decoration:none;
+}
+
+img{
+    max-width: 100%;
+    height:auto;
+}
+
+.section{
+    padding: 2rem 0 4rem;
+}
+
+.section_title{
+    font-size:var(--h1-font-size);
+}
+
+
+.section_subtitle{
+    display:block;
+    font-size: var(--small-font-size);
+    margin-bottom: var(--mb-3);
+}
+
+.section_subtitle,.section_title{
+    text-align:center;
+}
+
+
+/*button*/
+.button{
+    display: inline-block; /*Displays an element as a block element.*/
+    background-color: var(--first-color);
+    color:#FFF;
+    padding: 1rem;
+    border-radius: .5rem;
+    font-weight: var(--font-medium);
+}
+.button:hover{
+    background-color: var(--first-color-alt);
+}
+
+.button_icon{
+    font-size:1.25rem;
+    margin-left: var(--mb-0-25);
+    transition: .3s;
+}
+
+.button--flex{
+    display: inline-flex; /*Flex displays an element as a flexible structure.*/
+    align-items: center;
+}
+
+.button--small{
+    padding: .75rem 1rem;
+}
+
+.button--link{
+    padding: 0;
+    background-color: transparent;
+    color: var(--first-color);
+}
+
+.button--link:hover{
+    background-color:transparent;
+    color: var(--first-color-alt);
+    
+}
+
+
+/*Scroll Up*/
+.scroll-button{
+    border: none;
+    background-color: var(--first-color);
+    padding: 0 .3rem;
+    height: 2.5rem;
+    border-radius: .4rem;
+    z-index: var(--z-tooltip);
+    bottom: -20%;
+    bottom: 5rem;
+    right: 2rem;
+    cursor: pointer;
+    position: fixed;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.scroll-button.visible {
+  opacity: 1;
+  visibility: visible;
+}
+
+.scrollup:hover{
+    background-color: var(--first-color-alt);
+}
+
+.scrollup_icon{
+    font-size: 1.5rem;
+    color: #FFF;
+}
+
+
+/*scroll bar*/
+::-webkit-scrollbar{
+    width: .60rem;
+    background-color: var(--scroll-bar-color);
+    border-radius: .5rem;
+}
+
+::-webkit-scrollbar-thumb{
+    background-color: var(--scroll-thumb-color);
+    border-radius: .5rem;
+}
+
+::-webkit-scrollbar-thumb:hover{
+    background-color: var(--text-color-light);
+}
+
+
+@media screen and (min-width: 768px){
+    body{
+        margin: 0;
+    }
+
+    
+    .container{
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+
+    .section{
+        padding: 6rem 0 2rem;
+    }
+
+    .section_subtitle{
+        margin-bottom: 4rem;
+    }
+
+}
+
+@media screen and (min-width: 1024px){
+    .main{
+        padding:0;
+    }
 }
