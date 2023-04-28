@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import {Navbar,Home,Projects,Contact,Footer} from './containers';
 import { Routes, Route} from "react-router-dom";
-import './app.css';
+import './App.css';
 
 
 const App = () =>{
