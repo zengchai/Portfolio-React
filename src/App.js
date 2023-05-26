@@ -8,7 +8,7 @@ const App = () =>{
 
   const [isVisible, setIsVisible] = useState(false);
   const [is1Visible, set1IsVisible] = useState(false);
-  const [istheme, setIsTheme] = useState(localStorage.getItem('themeSwitching') ===  'true' || false);
+  const [istheme, setIsTheme] = useState(true);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -42,7 +42,6 @@ const App = () =>{
 
   const handletheme = (value) =>{
     setIsTheme(value);
-    localStorage.setItem("themeSwitching",value);
   }
 
     return(

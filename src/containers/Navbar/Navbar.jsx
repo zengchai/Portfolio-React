@@ -8,7 +8,7 @@ const Navbar = ({boolean,passingvalue}) => {
     const [is1Open,set1IsOpen] = useState(localStorage.getItem('PageSwitching') === '2' ? true : false);
     const [is2Open,set2IsOpen] = useState(localStorage.getItem('PageSwitching') === '3' ? true : false);
     const [is3Open,set3IsOpen] = useState(false);
-    const [theme,settheme] = useState(localStorage.getItem('themeSwitching') ===  'true' || false);
+    const [theme,settheme] = useState(true);
     const [isSmallScreen,setIsSmallScreen] = useState(false);
 
     const handlechange = () => {
@@ -54,7 +54,6 @@ const Navbar = ({boolean,passingvalue}) => {
     const handletheme = () =>{
         settheme(!theme);
         passingvalue(!theme);
-        localStorage.setItem("themeSwitching",!theme);
     }
 
     return(
